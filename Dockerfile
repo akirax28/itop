@@ -1,6 +1,7 @@
 FROM php:7.3.10-apache
 
 # install the PHP extensions we need
+MAINTAINER DTI IFRR
 ARG DEBIAN_FRONTEND=noninteractive
 RUN set -ex; \
 	savedAptMark="$(apt-mark showmanual)"; \
