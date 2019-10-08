@@ -1,4 +1,4 @@
-FROM php:7.3.10-apache
+FROM php:7.2-apache
 
 # install the PHP extensions we need
 MAINTAINER DTI IFRR
@@ -55,7 +55,7 @@ RUN set -ex; \
 	#	pecl install mcrypt-1.0.1; \
 		pecl install mcrypt; \
 
-	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
+	#apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
 	apt-get install -y graphviz libmcrypt4 unzip; \
 	docker-php-ext-enable mcrypt apcu; \
 	rm -rf /var/lib/apt/lists/*
