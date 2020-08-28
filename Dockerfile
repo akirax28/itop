@@ -76,7 +76,7 @@ WORKDIR /var/www
 #
 ENV ITOP_VERSION 2.7.1
 ENV ITOP_VERSION_COMMIT 5896
-ENV ITOP_SHA256 73b2a645f91287642ef0f66b72b94f3187a5d9989faf7cbf262d4c25538cbc24
+ENV ITOP_SHA256 0c6ef45a521c26758a7bb154b64b5edf0b832969087d2678f71c0eba379e0d4b
 
 RUN curl -fSL "https://sourceforge.net/projects/itop/files/itop/${ITOP_VERSION}/iTop-${ITOP_VERSION}-${ITOP_VERSION_COMMIT}.zip/download" -o ${ITOP_VERSION}.zip \
 	&& echo "${ITOP_SHA256} *${ITOP_VERSION}.zip" | sha256sum -c - \
